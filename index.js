@@ -5,6 +5,9 @@ const CategoriesRouter = require('./routes/categories');
 const ProductsRouter = require('./routes/products');
 const Path = require('path');
 
+const cors = require('cors')
+app.use(cors())
+
 app.set('view engine', 'ejs');
 
 app.use('/static', express.static(Path.join(__dirname, 'static')));
